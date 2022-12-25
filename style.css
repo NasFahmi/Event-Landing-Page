@@ -12,6 +12,10 @@
     --green:#13C693;
     --black:#121212;
     --marron:#C80429;
+    --white:#fff;
+
+    /* tambahan color font untuk dark mode */
+    --gray-white:#D9D8D6;
 
 }
 .testing{
