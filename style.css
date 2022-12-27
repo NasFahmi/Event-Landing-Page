@@ -16,18 +16,24 @@
     --black:#121212;
     --marron:#C80429;
     --white:#fefefe;
-
+    --purple:#6d28d9;
     /* tambahan color font untuk dark mode */
     --gray-white:#D9D8D6;
 }
 
-.container{
-    padding: 1.5rem 3rem;
+.wrapper {
     width: 100%;
-    height: 100%;
     background-color: var(--white);
 }
+
+.container{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+}
 nav{
+    /* padding: 1.5rem; */
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +41,7 @@ nav{
 nav ul{
     display: flex;
     justify-content: space-around;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 nav ul li a{
     text-decoration: none;
@@ -79,12 +85,52 @@ nav ul li a span{
     transition: .3s;
 }
 
+.hero {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.main-tulisan{
+    width: 50%;
+}
+
+.main-tulisan h3{
+    font-size: 3rem;
+    margin-bottom: -15px;
+    color: var(--purple);
+}
+
+.main-tulisan h2{
+    font-size: 4rem;
+    color: var(--purple);
+}
+
+.main-gambar{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.gambar{
+    width: 50%;
+}
+
+.gambar img{
+    width: 100%;
+    height: 100%;
+}
+
 /* dark theme */
-body.dark .container{
-    background-color: var(--black);
+body.dark .wrapper{
+    background-color: #0f172a;
     transition: .3s;
 }
 
 body.dark ul li a{
     color: #f1f5f9;
 }
+
+
