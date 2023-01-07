@@ -21,16 +21,9 @@
     --gray-white:#D9D8D6;
 }
 
-.wrapper {
-    width: 100%;
-    background-color: var(--white);
-}
-
 .container{
     width: 86%;
-    height: 100vh;
     margin: auto;
-    padding-top: 2%;
 }
 nav{
     /* padding: 1.5rem; */
@@ -57,6 +50,8 @@ nav ul li a span{
     color: var(--green);
     font-weight: 600;
     font-size: 1.25rem;
+    letter-spacing: 0px;
+    /* font-size: 20px;/ */
     cursor: pointer;
 }
 .button-theme{
@@ -133,7 +128,11 @@ nav ul li a span{
 }
 
 /* dark theme */
-body.dark .wrapper{
+body.dark .toggle2 span{
+    background-color: var(--white);
+}
+
+body.dark{
     background-color: var(--black);
     transition: .3s;
 }
@@ -149,7 +148,6 @@ body.dark ul li a{
     border-radius: 25px;
     position: relative;
 }
-
 
 .main-tulisan h3{
     font-size: 3rem;
@@ -192,11 +190,143 @@ body.dark ul li a{
 .btn.btn-view:hover{
     background-color: #0c8a66;
 }
-body.dark .wrapper .main-tulisan h3,
-body.dark .wrapper .main-tulisan h2,
-body.dark .wrapper .main-tulisan h5{
+body.dark .main-tulisan h3,
+body.dark .main-tulisan h2,
+body.dark .main-tulisan h5{
     color: #ffff;
 } 
 body.dark .cta .btn.btn-join{
     background-color: #232325;
+}
+
+/* toggle navbar */
+.toggle {
+    display: none;
+    z-index: 100;
+}
+
+.toggle2 {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.toggle2.tod span{
+    background-color: #f1f5f9;
+}
+
+.toggle2 span {
+    width: 28px;
+    height: 3px;
+    background-color: rgb(22, 21, 21);
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+.toggle2 span:first-child {
+    transform-origin: 0 0;
+}
+
+.toggle2 span:last-child {
+    transform-origin: 0 100%;
+}
+
+.toggle2 span.scale {
+    transform: scale(0);
+}
+
+.toggle2 span.silang1 {
+    transform: rotate(45deg) translate(-1px, 0px);
+}
+
+.toggle2 span.silang2 {
+    transform: rotate(-45deg) translate(-2px, -1px);
+}
+/* end */
+
+
+/* responsive */
+
+@media screen and (max-width: 576px) {
+    .container{
+        width: 95%;
+    }
+
+    
+    nav ul{
+        width: 50%;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgba(5, 5, 5, .8);
+        z-index: 99;
+        transition: all .5s ease-in-out;
+        opacity: 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        font-weight: 800;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        right: 0px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .toggle {
+        display: flex;
+        padding: 0px 20px;
+    }
+
+    .toggle2 {
+        display: flex;
+    }
+
+    .hero {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 400px;
+    }
+
+    .main-tulisan{
+        width: 100%;
+        margin-top: 4rem;
+        order: 2;
+    }
+
+    .main-tulisan h3{
+        font-size: 3rem;
+    }
+
+    .main-tulisan h2{
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+    .main-tulisan h5{
+        
+        font-size: 1.1rem;
+    }
+    .main-gambar{
+        width: 90%;
+        /* height: 300px; */
+        order: 1;
+    }
+
+
+
 }
