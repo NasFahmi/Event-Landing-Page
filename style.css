@@ -8,7 +8,6 @@
     font-family: 'Poppins',sans-serif;
     list-style: none;
     transition: .3s;
-    overflow: hidden;
 }
 :root{
     --yellow:#F5BA24;
@@ -20,6 +19,10 @@
     --purple:#6d28d9;
     /* tambahan color font untuk dark mode */
     --gray-white:#D9D8D6;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 .container{
