@@ -8,6 +8,7 @@
     font-family: 'Poppins',sans-serif;
     list-style: none;
     transition: .3s;
+    overflow: hidden;
 }
 :root{
     --yellow:#F5BA24;
